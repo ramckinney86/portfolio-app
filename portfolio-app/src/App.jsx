@@ -17,7 +17,7 @@ import {
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col relative">
+    <div className="min-h-screen bg-slate-950 text-slate-200 flex flex-col relative">
       {/* Navigation Anchor for larger screens */}
       <TableOfContents />
 
@@ -43,9 +43,9 @@ function App() {
         </section>
 
         {/* Capabilities / Skills Section */}
-        <section id="skills" className="py-20 bg-white/50">
+        <section id="skills" className="py-20 bg-slate-900/30">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-center mb-12 text-slate-800 uppercase tracking-widest text-[14px]">
+            <h2 className="text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]">
               Technical Capabilities
             </h2>
             
@@ -90,10 +90,10 @@ function App() {
 
         {/* Education & Contact Placeholders */}
         <section id="education" className="py-20">
-          <h2>Education</h2>
+          <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Education</h2>
         </section>
         <section id="contact" className="py-20">
-          <h2>Contact</h2>
+          <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Contact</h2>
         </section>
       </main>
 

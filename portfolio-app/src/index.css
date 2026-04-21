@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
-/* Adjust the 160px based on the height of your header */
-html {
-  scroll-behavior: smooth;
-}
-
-section[id] {
-  scroll-margin-top: 140px;
+/* index.css */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  section {
+    scroll-margin-top: 10rem; /* Matches your sticky header height plus breathing room */
+  }
 }

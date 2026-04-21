@@ -6,10 +6,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const footerLinks = [
-    { icon: MdOutlineEmail, label: 'Email', href: 'mailto:your.email@example.com', color: '#EA4335' },
-    { icon: FaLinkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile', color: '#0A66C2' },
-    { icon: FaGithub, label: 'GitHub', href: 'https://github.com/yourusername', color: '#181717' },
-    { icon: MdOutlineDescription, label: 'Resume', href: '/resume.pdf', color: '#475569' }
+    { icon: MdOutlineEmail, href: 'mailto:ramckinney86@gmail.com', color: '#EA4335' },
+    { icon: FaLinkedin,       href: 'https://www.linkedin.com/in/rob-mckinney-19a70217/', color: '#0A66C2' },
+    { icon: FaGithub, href: 'https://github.com/ramckinney86', color: '#181717' },
+    { icon: MdOutlineDescription, href: '/resume.pdf', color: '#475569' }
   ];
 
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         
         <div className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">
-          © {currentYear} Rob • Philadelphia, PA
+          © {currentYear} Rob McKinney • Philadelphia, PA
         </div>
 
         <div className="flex items-center gap-6">

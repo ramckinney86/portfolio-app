@@ -8,7 +8,7 @@ const SkillIcon = ({ icon: Icon, name, color }) => (
       className="transition-all duration-300"
       style={{ color: color || 'currentColor' }} 
     />
-    <span className="mt-2 text-[9px] font-bold uppercase tracking-widest text-center text-slate-500 group-hover:text-slate-900 leading-tight">
+    <span className="mt-2 text-[9px] font-bold uppercase tracking-widest text-center text-slate-200 group-hover:text-slate-900 leading-tight">
       {name}
     </span>
   </div>

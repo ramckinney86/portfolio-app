@@ -3,6 +3,7 @@ import React from 'react';
 const About = () => {
   return (
     <section className="max-w-3xl mx-auto px-6 py-20 text-center">
+      <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>About Me</h2>
       <div className="space-y-8">
         {/* Primary Summary */}
         <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">

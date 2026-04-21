@@ -7,20 +7,20 @@ const Header = () => {
     { 
       icon: MdOutlineEmail, 
       label: 'Email', 
-      href: 'mailto:your.email@example.com', 
+      href: 'mailto:ramckinney86@gmail.com', 
       color: '#EA4335' 
     },
     { 
       icon: FaLinkedin, 
       label: 'LinkedIn', 
-      href: 'https://linkedin.com/in/yourprofile', 
+      href: 'https://www.linkedin.com/in/rob-mckinney-19a70217/', 
       color: '#0A66C2' 
     },
     { 
       icon: FaGithub, 
       label: 'GitHub', 
-      href: 'https://github.com/yourusername', 
-      color: '#181717' 
+      href: 'https://github.com/ramckinney86', 
+      color: '#FFFFFF'
     },
     { 
       icon: MdOutlineDescription, 
@@ -32,12 +32,12 @@ const Header = () => {
 
   return (
     /* Added sticky, top-0, z-50, and backdrop-blur */
-    <header className="sticky top-0 z-50 w-full py-8 px-4 flex flex-col items-center justify-center bg-slate-50/80 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
-      <h1 className="text-3xl font-black text-slate-900 uppercase tracking-tighter mb-1">
-        Rob
+    <header className="sticky top-0 z-50 w-full py-8 px-4 flex flex-col items-center justify-center bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <h1 className="text-3xl font-black text-white uppercase tracking-tighter mb-1">
+        Rob McKinney
       </h1>
-      <p className="text-slate-500 font-medium tracking-widest uppercase text-[9px] mb-6">
-        Web Developer & Technical Lead
+      <p className="text-slate-400 font-medium tracking-widest uppercase text-[9px] mb-6">
+        Web Developer | Digital Marketer | UX Strategist
       </p>
       
       <div className="flex gap-8">
@@ -55,7 +55,7 @@ const Header = () => {
               style={{ color: link.color }}
               className="mb-1"
             />
-            <span className="text-[8px] font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-900 transition-colors duration-300">
+            <span className="text-[8px] font-bold uppercase tracking-widest text-slate-500 and group-hover:text-white transition-colors duration-300">
               {link.label}
             </span>
           </a>

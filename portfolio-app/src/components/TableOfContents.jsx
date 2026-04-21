@@ -45,12 +45,12 @@ const TableOfContents = () => {
 
       {/* DESKTOP SIDEBAR: Same logic as before, hidden on mobile */}
       <nav className="fixed left-8 top-1/2 -translate-y-1/2 hidden xl:block w-48 z-40">
-        <ul className="space-y-6 border-l border-slate-200 pl-6">
+        <ul className="space-y-6 border-l border-slate-800 pl-6">
           {navItems.map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
-                className="block text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-slate-900 transition-colors duration-300"
+                className="block text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-slate-white transition-colors duration-300"
               >
                 {item.label}
               </a>
