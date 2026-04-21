@@ -39,7 +39,11 @@ function App() {
 
         {/* Professional Experience Placeholder */}
         <section id="experience" className="max-w-5xl mx-auto px-6 py-12">
-          {/* Experience components go here */}
+          <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Experience</h2>
+        </section>
+        
+        <section id="projects" className="max-w-5xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Projects</h2>
         </section>
 
         {/* Capabilities / Skills Section */}
