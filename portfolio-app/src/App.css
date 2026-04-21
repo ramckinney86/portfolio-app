@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Adjust the 160px based on the height of your header */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 160px;
+}
