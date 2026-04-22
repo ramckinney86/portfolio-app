@@ -52,7 +52,6 @@ function App() {
               <div className="w-20 h-1 bg-blue-600 mb-10"></div>
             </div>
                 <SkillGrid />
-            
           </div>
           <div className="mt-16 flex justify-center">
             <div className="h-px w-16 bg-slate-200"></div>
