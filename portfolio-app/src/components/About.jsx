@@ -2,24 +2,23 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className="max-w-3xl mx-auto px-6 text-center">
-      <div className="space-y-8">
-        {/* Primary Summary */}
-        <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-          I am a Philadelphia-based Senior Web Developer and Technical Lead with over 15 years of experience architecting high-performance digital experiences. Throughout my career, I have specialized in bridging the gap between complex back-end engineering and user-centric front-end design, ensuring that technical infrastructure always serves a clear strategic purpose. My background spans the full digital lifecycle, from the initial wireframe stage through to global launch, for major brands such as Viacom and OnSolve, as well as enterprise professional associations like Aptify and Vanguard.
-        </p>
-        
-        {/* Professional History & Focus */}
-        <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-          My technical foundation is rooted in the modern JavaScript ecosystem, where I leverage React and Next.js alongside core proficiencies in HTML5, CSS, and PHP. This engineering expertise is complemented by a deep understanding of the marketing and business analytics required to drive growth in the software and media sectors. I have a proven track record of leading full-scale site migrations, rebranding initiatives, and CI/CD optimizations within enterprise CMS platforms like WordPress and Sitefinity.
+    <div className="max-w-3xl mx-auto">
+      <div className="space-y-8 text-slate-400 text-sm md:text-base leading-loose">
+        <p>
+          My approach to web engineering is rooted in <span className="text-slate-200">system architecture and signal flow</span>—concepts I first mastered while earning my B.S. in Recording Industry Management. This unique foundation allows me to view complex software ecosystems through a lens of stability and maintainability.
         </p>
 
-        {/* Specialized Interests */}
-        <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-          Central to my approach is a UI/UX-focused methodology. I believe that digital strategy is most effective when it prioritizes the user, which is why I remain hands-on with site architecture and interface development. Beyond my technical contributions, I am an adept leader capable of managing remote and offshore teams while navigating high-level stakeholder requirements. I remain committed to continuous growth, recently refining my skill set through advanced coursework to ensure I am always bringing the latest industry standards to my local and global projects.
+        <p>
+          Currently, I lean into the modern JavaScript ecosystem, utilizing <span className="text-slate-200">React, Next.js, and TypeScript</span> to build modular interfaces. I am an advocate for AI-assisted development, integrating tools like 
+          <span className="text-slate-200"> Claude Code</span> into my workflow to accelerate component building 
+          and refactoring without sacrificing code quality.
+        </p>
+
+        <p>
+          Beyond the terminal, I'm a fixture in the Philadelphia tech community and a frequent explorer of microcontroller development. I believe the best digital solutions are those that respect both the underlying hardware and the end-user's journey.
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 

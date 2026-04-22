@@ -2,11 +2,15 @@ import React from 'react';
 
 const Intro = () => {
   return (
-    <section className="max-w-3xl mx-auto px-6 py-8 text-center">
-      <div className="space-y-8">
-        <p>I am a Philadelphia-based Senior Web Developer and Technical Lead with over 15 years of experience architecting high-performance digital experiences for global brands like Viacom and OnSolve. Expertly bridging the gap between complex engineering and user-centric design, I manage the full digital lifecycle from initial wireframing to the deployment of enterprise-scale applications using React, Next.js, and PHP. My background integrates deep technical proficiency with digital marketing strategy and business analytics, allowing me to lead rebranding initiatives and site migrations that consistently prioritize seamless UI/UX and measurable growth.</p>
-      </div>
-    </section>
+    <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+      <p className="text-slate-300 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+        With over <span className="text-white font-semibold">15 years of professional experience</span>, 
+        I specialize in engineering high-performance web applications and enterprise CMS architectures. 
+        From scaling global platforms at <span className="text-white">Viacom</span> to leading full-scale 
+        digital rebrands at <span className="text-white">OnSolve</span>, I bridge the gap between 
+        complex backend logic and intuitive user experiences.
+      </p>
+    </div>
   );
 };
 

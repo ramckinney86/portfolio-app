@@ -1,6 +1,7 @@
 import About from './components/About';
 import Contact from './components/Contact';
 import Education from './components/Education';
+import Experience from './components/Experience';
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -27,15 +28,21 @@ function App() {
         {/* Introduction */}
         <section id="intro" className="max-w-3xl mx-auto px-6 py-12">
           <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Welcome!</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
           <Intro />
           <div className="mt-16 flex justify-center">
-            <div className="h-px w-16 bg-slate-200"></div>
+            <div className="w-20 h-1 bg-slate-200"></div>
           </div>
         </section>
 
         {/* About/Bio */}
         <section id="about" className="max-w-3xl mx-auto px-6 py-12">
           <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>About Me</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
           <About />
           <div className="mt-16 flex justify-center">
             <div className="h-px w-16 bg-slate-200"></div>
@@ -44,7 +51,11 @@ function App() {
 
         {/* Experience */}
         <section id="experience" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Experience</h2>
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Professional Experience</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-2"></div>
+          </div>
+          <Experience />
           <div className="mt-16 flex justify-center">
             <div className="h-px w-16 bg-slate-200"></div>
           </div>
@@ -53,6 +64,9 @@ function App() {
         {/* Projects */}
         <section id="projects" className="max-w-5xl mx-auto px-6 py-12">
           <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Projects</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
           <div className="mt-16 flex justify-center">
             <div className="h-px w-16 bg-slate-200"></div>
           </div>
@@ -64,7 +78,9 @@ function App() {
             <h2 className="text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]">
               Technical Skills
             </h2>
-            
+            <div className="mt-8 flex justify-center">
+              <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+            </div>
             <div className="space-y-24">
               <div>
                 <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
@@ -108,6 +124,9 @@ function App() {
         {/* Education */}
         <section id="education" className="py-20">
           <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Education</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
           <Education />
           <div className="mt-16 flex justify-center">
             <div className="h-px w-16 bg-slate-200"></div>
@@ -117,6 +136,9 @@ function App() {
         {/* Contact */}
         <section id="contact" className="py-20">
           <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Contact</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
           <Contact />
         </section>
       </main>
