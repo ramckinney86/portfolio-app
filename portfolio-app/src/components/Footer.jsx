@@ -2,16 +2,10 @@ import React from 'react';
 import { MdOutlineEmail, MdOutlineDescription } from 'react-icons/md';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
+import { footerLinks } from '../data/contact';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  const footerLinks = [
-    { icon: MdOutlineEmail, label: 'Email', href: 'mailto:ramckinney86@gmail.com', color: '#EA4335' },
-    { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/rob-mckinney-19a70217/', color: '#0A66C2' },
-    { icon: FaGithub, label: 'Github', href: 'https://github.com/ramckinney86', color: '#181717' },
-    { icon: MdOutlineDescription, label: 'Resume', href: '/resume.pdf', color: '#475569' }
-  ];
-
   return (
     <footer className="w-full py-8 px-4 mt-20 border-t border-slate-200 bg-slate-50">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">

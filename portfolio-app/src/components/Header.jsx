@@ -2,34 +2,9 @@ import React from 'react';
 import { MdOutlineEmail, MdOutlineDescription } from 'react-icons/md';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
-const Header = () => {
-  const contactLinks = [
-    { 
-      icon: MdOutlineEmail, 
-      label: 'Email', 
-      href: 'mailto:ramckinney86@gmail.com', 
-      color: '#EA4335' 
-    },
-    { 
-      icon: FaLinkedin, 
-      label: 'LinkedIn', 
-      href: 'https://www.linkedin.com/in/rob-mckinney-19a70217/', 
-      color: '#0A66C2' 
-    },
-    { 
-      icon: FaGithub, 
-      label: 'GitHub', 
-      href: 'https://github.com/ramckinney86', 
-      color: '#FFFFFF'
-    },
-    { 
-      icon: MdOutlineDescription, 
-      label: 'Resume', 
-      href: '/resume.pdf', 
-      color: '#475569' 
-    }
-  ];
+import { contactLinks } from '../data/contact';
 
+const Header = () => {
   return (
     /* Added sticky, top-0, z-50, and backdrop-blur */
     <header className="sticky top-0 z-50 w-full py-8 px-4 flex flex-col items-center justify-center bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
