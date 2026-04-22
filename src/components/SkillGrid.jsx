@@ -29,7 +29,7 @@ const SkillGrid = () => {
       <div className="relative mb-8">
         {/* Dynamic Gradient Indicator (Mobile Only) */}
         <div 
-          className={`absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none sm:hidden transition-opacity duration-300 ${
+          className={`absolute right-0 top-0 bottom-0 w-12 bg-linear-to-l from-slate-950 to-transparent z-10 pointer-events-none sm:hidden transition-opacity duration-300 ${
             showGradient ? 'opacity-100' : 'opacity-0'
           }`} 
         />
@@ -49,7 +49,7 @@ const SkillGrid = () => {
             >
               {category}
               <span 
-                className={`absolute bottom-0 left-0 w-full h-[2px] transition-transform duration-300 transform origin-left ${
+                className={`absolute bottom-0 left-0 w-full h-0.5 transition-transform duration-300 transform origin-left ${
                   activeTab === category ? 'bg-blue-500 scale-x-100' : 'bg-transparent scale-x-0 group-hover:bg-slate-700 group-hover:scale-x-100'
                 }`}
               />
@@ -61,7 +61,7 @@ const SkillGrid = () => {
       {/* Grid Display - Balanced Bucket Size
           The min-height prevents the footer from jumping when switching tabs.
       */}
-      <div className="min-h-[360px] sm:min-h-[260px] lg:min-h-[180px]"> 
+      <div className="min-h-102 sm:min-h-71 lg:min-h-51"> 
         <div 
           key={activeTab}
           className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-y-10 gap-x-4 animate-in fade-in slide-in-from-bottom-1 duration-500"
