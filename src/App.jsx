@@ -30,17 +30,7 @@ function App() {
           </div>
         </section>
 
-        {/* About/Bio */}
-        <section id="about" className="max-w-3xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>About Me</h2>
-          <div className="mt-8 flex justify-center">
-            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
-          </div>
-          <About />
-          <div className="mt-16 flex justify-center">
-            <div className="h-px w-16 bg-slate-200"></div>
-          </div>
-        </section>
+        
 
         {/* Skills */}
         <section id="skills" className="py-20">
@@ -60,7 +50,7 @@ function App() {
 
         {/* Experience */}
         <section id="experience" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Professional Experience</h2>
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Experience</h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-2"></div>
           </div>
@@ -76,6 +66,18 @@ function App() {
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-10"></div>
           </div>
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
+        </section>
+
+        {/* About/Bio */}
+        <section id="about" className="max-w-3xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>About Me</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
+          <About />
           <div className="mt-16 flex justify-center">
             <div className="h-px w-16 bg-slate-200"></div>
           </div>

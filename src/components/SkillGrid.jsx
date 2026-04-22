@@ -2,33 +2,32 @@ import React, { useState, useRef, useEffect } from 'react';
 import { skillCategories } from '../data/skills';
 
 const SkillGrid = () => {
+  // Dynamically get categories to ensure state matches data/skills.js
   const categories = Object.keys(skillCategories);
   const [activeTab, setActiveTab] = useState(categories[0]);
   const [showGradient, setShowGradient] = useState(true);
   const scrollRef = useRef(null);
 
-  // Check if we've scrolled to the end of the tab list
+  // Check if we've scrolled to the end of the tab list for the mobile gradient
   const handleScroll = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      // If we are within 2px of the end, hide the gradient
       const isAtEnd = scrollWidth - scrollLeft <= clientWidth + 2;
       setShowGradient(!isAtEnd);
     }
   };
 
-  // Re-check scroll on mount or window resize
   useEffect(() => {
     handleScroll();
     window.addEventListener('resize', handleScroll);
     return () => window.removeEventListener('resize', handleScroll);
-  }, []);
+  }, [activeTab]); // Re-check on tab switch
 
   return (
     <div className="w-full">
       {/* Category Tabs Container */}
       <div className="relative mb-8">
-        {/* Dynamic Gradient Indicator */}
+        {/* Dynamic Gradient Indicator (Mobile Only) */}
         <div 
           className={`absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none sm:hidden transition-opacity duration-300 ${
             showGradient ? 'opacity-100' : 'opacity-0'
@@ -59,26 +58,38 @@ const SkillGrid = () => {
         </div>
       </div>
 
-      {/* Grid Display - Consistent "Bucket" Size */}
-      {/* min-h-72 (280px) keeps the footer static even when categories vary in size */}
-      <div className="min-h-72 sm:min-h-64 lg:min-h-48"> 
+      {/* Grid Display - Balanced Bucket Size
+          The min-height prevents the footer from jumping when switching tabs.
+      */}
+      <div className="min-h-[360px] sm:min-h-[260px] lg:min-h-[180px]"> 
         <div 
           key={activeTab}
-          className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-y-8 gap-x-4 animate-in fade-in slide-in-from-bottom-1 duration-500"
+          className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-y-10 gap-x-4 animate-in fade-in slide-in-from-bottom-1 duration-500"
         >
-          {skillCategories[activeTab].map((skill) => (
-            <div 
-              key={skill.name} 
-              className="flex flex-col items-center group cursor-zoom-in"
-            >
-              <div className="p-2 transition-transform duration-300 group-hover:scale-110">
-                <skill.icon size={32} style={{ color: skill.color }} className="opacity-70 group-hover:opacity-100 transition-opacity" />
+          {/* Defensive Check: Only map if the category exists in skills.js */}
+          {skillCategories[activeTab] ? (
+            skillCategories[activeTab].map((skill) => (
+              <div 
+                key={skill.name} 
+                className="flex flex-col items-center group cursor-zoom-in"
+              >
+                <div className="p-2 transition-transform duration-300 group-hover:scale-110">
+                  <skill.icon 
+                    size={32} 
+                    style={{ color: skill.color }} 
+                    className="opacity-70 group-hover:opacity-100 transition-opacity" 
+                  />
+                </div>
+                <span className="mt-2 text-[9px] sm:text-[10px] font-medium uppercase tracking-wider text-slate-500 group-hover:text-white transition-colors text-center leading-tight">
+                  {skill.name}
+                </span>
               </div>
-              <span className="mt-1 text-[9px] sm:text-[10px] font-medium uppercase tracking-wider text-slate-500 group-hover:text-white transition-colors text-center leading-tight">
-                {skill.name}
-              </span>
+            ))
+          ) : (
+            <div className="col-span-full py-10 text-center text-slate-500 italic">
+              Select a category to view skills.
             </div>
-          ))}
+          )}
         </div>
       </div>
     </div>
