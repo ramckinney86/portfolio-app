@@ -12,7 +12,7 @@ const Education = () => {
             </div>
             <h3 className="text-white font-bold text-[12px] uppercase tracking-wider h-10 mb-2">{edu.institution}</h3>
             <p className="text-slate-200 text-[11px] font-medium h-6 mb-1">{edu.degree}</p>
-            <p className="text-slate-500 text-[10px] leading-relaxed h-10 mb-4 max-w-[200px]">{edu.focus}</p>
+            <p className="text-slate-500 text-[10px] leading-relaxed h-10 mb-4 max-w-50">{edu.focus}</p>
             <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-600">{edu.date}</span>
           </div>
         ))}
