@@ -15,7 +15,7 @@ export const jobs = [
     company: "OnSolve",
     role: "Senior Web Developer",
     location: "Atlanta / Remote",
-    period: "August 2020 – September 2024",
+    period: "August 2020 - September 2024",
     description: "Led the full redesign, rebrand, and rebuild of multiple enterprise properties. Streamlined marketing operations through CMS UX improvements and page speed optimization.",
     accomplishments: [
     "Enterprise Consolidation: Migrated multiple brand properties into a unified domain while preserving SEO equity.",
@@ -56,7 +56,7 @@ export const jobs = [
     description: "Focused on site redesigns, content migration, and information architecture for the professional association sector.",
     accomplishments: [
     "Sitefinity Development: Developed a modular .NET widget toolbox to accelerate client launches.",
-    "Innovation: Pioneered the company’s first mobile-responsive design offerings through business analytics and discovery."
+    "Innovation: Pioneered the company's first mobile-responsive design offerings through business analytics and discovery."
     ]
 }
 ];

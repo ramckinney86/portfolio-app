@@ -3,12 +3,7 @@ import { jobs } from '../data/experience';
 
 const Experience = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-24">
-      <h2 className="text-white font-bold tracking-widest uppercase text-[14px] mb-16 flex items-center">
-        <span className="w-8 h-[1px] bg-slate-800 mr-4"></span>
-        Professional Experience
-      </h2>
-
+    <div className="max-w-4xl mx-auto px-6 py-12">
       <div className="space-y-20">
         {jobs.map((job, index) => (
           <div key={`${job.company}-${index}`} className="relative pl-8 border-l border-slate-900 hover:border-blue-600 transition-colors duration-500">

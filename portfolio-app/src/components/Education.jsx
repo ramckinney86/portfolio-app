@@ -3,7 +3,7 @@ import { educationData } from '../data/education';
 
 const Education = () => {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-20">
+    <div className="max-w-5xl mx-auto px-6 py-4">
       <h2 className="text-white font-bold tracking-widest uppercase text-[14px] mb-16 text-center">
         Education & Certifications
       </h2>

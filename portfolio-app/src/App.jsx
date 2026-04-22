@@ -1,85 +1,148 @@
+import About from './components/About';
+import Contact from './components/Contact';
+import Education from './components/Education';
+import Experience from './components/Experience';
 import React from 'react';
-
-// Layout Components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Intro from './components/Introduction';
 import TableOfContents from './components/TableOfContents';
-import Introduction from './components/Introduction';
-import About from './components/About';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Contact from './components/Contact';
 import SkillGrid from './components/SkillGrid';
 
-// Data Imports (The New Data Format)
-import { navItems } from './data/navigation';
-import { devSkills, designSkills, marketingSkills } from './data/skills';
-import { contactLinks } from './data/contact';
+// Import your centralized data
+import { 
+  devSkills, 
+  designSkills, 
+  marketingSkills, 
+  softwareSkills, 
+  otherSkills 
+} from './data/skills';
 
 function App() {
   return (
-    /* The main wrapper sets the global theme: Slate-950 for a deep, modern dark mode */
-    <div className="min-h-screen bg-slate-950 text-slate-200 flex flex-col relative font-sans selection:bg-blue-500/30">
-      
-      {/* Navigation Layer */}
-      <TableOfContents items={navItems} />
-      <Header links={contactLinks} />
-
+    <div className="min-h-screen bg-slate-950 text-slate-200 flex flex-col relative">
+      <TableOfContents />
+      <Header />
       <main className="flex-grow">
         
-        {/* Intro & Narrative Section */}
-        <section id="intro" className="scroll-mt-40">
-          <Introduction />
-        </section>
-
-        <section id="about" className="scroll-mt-40 border-t border-slate-900/50">
-          <About />
-        </section>
-
-        {/* Career Timeline Section */}
-        <section id="experience" className="scroll-mt-40 bg-slate-950">
-          <Experience />
-        </section>
-
-        {/* Technical Capabilities Section */}
-        <section id="skills" className="scroll-mt-40 py-24 border-t border-slate-900/50">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-white font-bold tracking-widest uppercase text-[14px] mb-16 flex items-center justify-center">
-              Technical Capabilities
-            </h2>
-            
-            <div className="space-y-32">
-              <div>
-                <h3 className="text-slate-500 text-[10px] uppercase tracking-[0.3em] font-bold mb-12 text-center">Development Stack</h3>
-                <SkillGrid items={devSkills} />
-              </div>
-              
-              <div>
-                <h3 className="text-slate-500 text-[10px] uppercase tracking-[0.3em] font-bold mb-12 text-center">Design & UI/UX</h3>
-                <SkillGrid items={designSkills} />
-              </div>
-
-              <div>
-                <h3 className="text-slate-500 text-[10px] uppercase tracking-[0.3em] font-bold mb-12 text-center">Digital Operations</h3>
-                <SkillGrid items={marketingSkills} />
-              </div>
-            </div>
+        {/* Introduction */}
+        <section id="intro" className="max-w-3xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Welcome!</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
+          <Intro />
+          <div className="mt-16 flex justify-center">
+            <div className="w-20 h-1 bg-slate-200"></div>
           </div>
         </section>
 
-        {/* Academic & Certifications Section */}
-        <section id="education" className="scroll-mt-40 border-t border-slate-900/50">
+        {/* About/Bio */}
+        <section id="about" className="max-w-3xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>About Me</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
+          <About />
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
+        </section>
+
+        {/* Experience */}
+        <section id="experience" className="max-w-5xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Professional Experience</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-2"></div>
+          </div>
+          <Experience />
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
+        </section>
+        
+        {/* Projects */}
+        <section id="projects" className="max-w-5xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Projects</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section id="skills" className="py-20">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]">
+              Technical Skills
+            </h2>
+            <div className="mt-8 flex justify-center">
+              <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+            </div>
+            <div className="space-y-24">
+              <div>
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                  Development
+                </h3>
+                <SkillGrid items={devSkills} />
+              </div>
+
+              <div>
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                  Design & UI/UX
+                </h3>
+                <SkillGrid items={designSkills} />
+              </div>
+              <div>
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                  Digital Strategy & Marketing
+                </h3>
+                <SkillGrid items={marketingSkills} />
+              </div>
+
+              <div>
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                  Environments & Tools
+                </h3>
+                <SkillGrid items={softwareSkills} />
+              </div>
+              <div>
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                  Management & Operations
+                </h3>
+                <SkillGrid items={otherSkills} />
+              </div>
+            </div>
+          </div>
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
+        </section>
+
+        {/* Education */}
+        <section id="education" className="py-20">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Education</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
           <Education />
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
         </section>
-
-        {/* Final Connection Section */}
-        <section id="contact" className="scroll-mt-40 border-t border-slate-900/50 bg-slate-950">
-          <Contact links={contactLinks} />
+        
+        {/* Contact */}
+        <section id="contact" className="py-20">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Contact</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
+          <Contact />
         </section>
-
       </main>
-
-      <Footer links={contactLinks} />
+      <Footer />
     </div>
   );
 }
