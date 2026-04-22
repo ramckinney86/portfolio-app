@@ -16,11 +16,11 @@ function App() {
     <div className="min-h-screen bg-slate-950 text-slate-200 flex flex-col relative">
       <TableOfContents />
       <Header />
-      <main className="flex-grow">
+      <main className="grow">
         
         {/* Introduction */}
-        <section id="intro" className="max-w-3xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Welcome!</h2>
+        <section id="intro">
+          <h2>Welcome!</h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-10"></div>
           </div>
@@ -31,9 +31,9 @@ function App() {
         </section>
         
         {/* Skills */}
-        <section id="skills" className="max-w-5xl mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]">
+        <section id="skills">
+          <div>
+            <h2>
               Technical Skills
             </h2>
             <div className="mt-8 flex justify-center">
@@ -47,8 +47,8 @@ function App() {
         </section>
 
         {/* Experience */}
-        <section id="experience" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Experience</h2>
+        <section id="experience">
+          <h2>Experience</h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-2"></div>
           </div>
@@ -59,8 +59,8 @@ function App() {
         </section>
         
         {/* Projects */}
-        <section id="projects" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Projects</h2>
+        <section id="projects">
+          <h2>Projects</h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-10"></div>
           </div>
@@ -70,8 +70,8 @@ function App() {
         </section>
 
         {/* About/Bio */}
-        <section id="about" className="max-w-3xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>About Me</h2>
+        <section id="about">
+          <h2>About Me</h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-10"></div>
           </div>
@@ -82,8 +82,8 @@ function App() {
         </section>
 
         {/* Education */}
-        <section id="education" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Education</h2>
+        <section id="education">
+          <h2>Education</h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-10"></div>
           </div>
@@ -94,8 +94,8 @@ function App() {
         </section>
         
         {/* Contact */}
-        <section id="contact" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Contact</h2>
+        <section id="contact">
+          <h2>Contact</h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-10"></div>
           </div>
