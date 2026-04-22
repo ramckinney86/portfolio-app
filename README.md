@@ -18,9 +18,7 @@ A professional, modular portfolio built with **React**, **Tailwind CSS**, and **
 * **Icons:** React Icons (Font Awesome, Material Design)
 
 ## 📁 Project Structure
-```
 
-```text
 portfolio/
 ├── public/              # Static assets (Resume PDF, Favicons)
 ├── src/
@@ -30,7 +28,7 @@ portfolio/
 │   └── App.jsx          # Main layout engine
 ├── .gitignore           # Root-level ignore (configured for node_modules)
 └── package.json         # Project manifest & dependencies
-```
+
 
 ## 🛠️ Local Development
 
