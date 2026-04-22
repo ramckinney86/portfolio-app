@@ -29,11 +29,9 @@ function App() {
             <div className="w-20 h-1 bg-slate-200"></div>
           </div>
         </section>
-
         
-
         {/* Skills */}
-        <section id="skills" className="py-20">
+        <section id="skills" className="max-w-5xl mx-auto px-6 py-12">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]">
               Technical Skills
@@ -84,7 +82,7 @@ function App() {
         </section>
 
         {/* Education */}
-        <section id="education" className="py-20">
+        <section id="education" className="max-w-5xl mx-auto px-6 py-12">
           <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Education</h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-10"></div>
@@ -96,7 +94,7 @@ function App() {
         </section>
         
         {/* Contact */}
-        <section id="contact" className="py-20">
+        <section id="contact" className="max-w-5xl mx-auto px-6 py-12">
           <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Contact</h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-10"></div>
