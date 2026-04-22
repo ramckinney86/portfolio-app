@@ -33,6 +33,7 @@ portfolio/
 ## 🛠️ Local Development
 
 **Clone the repository:**
+```
 ```bash
 git clone [https://github.com/ramckinney86/portfolio.git](https://github.com/ramckinney86/portfolio.git)
 ```
