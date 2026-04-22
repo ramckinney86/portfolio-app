@@ -71,7 +71,7 @@ export const marketingSkills = [
   { icon: SiGoogleanalytics, name: 'GA4', color: '#E37400' },
   { icon: SiGoogleads, name: 'Google Ads', color: '#4285F4' },
   { icon: SiMeta, name: 'Meta Ads', color: '#0668E1' },
-  { icon: SiPosthog, name: 'PostHog', color: '#000000' },
+  { icon: SiPosthog, name: 'PostHog', color: '#ffffff' },
   { icon: FaFileAlt, name: 'Content Strategy', color: '#DB2777' },
   { icon: MdOutlinePublic, name: 'Global Strategy', color: '#6366F1' },
   { icon: MdOutlineArticle, name: 'Lead Capture', color: '#10B981' },

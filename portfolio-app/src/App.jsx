@@ -1,4 +1,5 @@
 import About from './components/About';
+import Education from './components/Education';
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -28,7 +29,8 @@ function App() {
       <main className="flex-grow">
         
         {/* Intro Section */}
-        <section id="intro">
+        <section id="intro" className="max-w-3xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center text-white uppercase tracking-widest text-[14px]'>Welcome!</h2>
           <Intro />
         </section>
 
@@ -47,46 +49,46 @@ function App() {
         </section>
 
         {/* Capabilities / Skills Section */}
-        <section id="skills" className="py-20 bg-slate-900/30">
+        <section id="skills" className="py-20">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]">
-              Technical Capabilities
+              Technical Skills
             </h2>
             
             <div className="space-y-24">
               <div>
-                <h3 className="text-center text-slate-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
-                  Development & Engineering
+                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                  Development
                 </h3>
                 <SkillGrid items={devSkills} />
               </div>
 
               <div>
-                <h3 className="text-center text-slate-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
+                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
                   Design & UI/UX
                 </h3>
                 <SkillGrid items={designSkills} />
               </div>
 
-              <div>
-                <h3 className="text-center text-slate-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
-                  Management & Operations
-                </h3>
-                <SkillGrid items={otherSkills} />
-              </div>
 
               <div>
-                <h3 className="text-center text-slate-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
+                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
                   Digital Strategy & Marketing
                 </h3>
                 <SkillGrid items={marketingSkills} />
               </div>
 
               <div>
-                <h3 className="text-center text-slate-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
-                  Environment & Tooling
+                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                  Environments & Tools
                 </h3>
                 <SkillGrid items={softwareSkills} />
+              </div>
+              <div>
+                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                  Management & Operations
+                </h3>
+                <SkillGrid items={otherSkills} />
               </div>
             </div>
           </div>
@@ -95,6 +97,7 @@ function App() {
         {/* Education & Contact Placeholders */}
         <section id="education" className="py-20">
           <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Education</h2>
+          <Education />
         </section>
         <section id="contact" className="py-20">
           <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Contact</h2>

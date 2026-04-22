@@ -6,10 +6,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const footerLinks = [
-    { icon: MdOutlineEmail, href: 'mailto:ramckinney86@gmail.com', color: '#EA4335' },
-    { icon: FaLinkedin,       href: 'https://www.linkedin.com/in/rob-mckinney-19a70217/', color: '#0A66C2' },
-    { icon: FaGithub, href: 'https://github.com/ramckinney86', color: '#181717' },
-    { icon: MdOutlineDescription, href: '/resume.pdf', color: '#475569' }
+    { icon: MdOutlineEmail, label: 'Email', href: 'mailto:ramckinney86@gmail.com', color: '#EA4335' },
+    { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/rob-mckinney-19a70217/', color: '#0A66C2' },
+    { icon: FaGithub, label: 'Github', href: 'https://github.com/ramckinney86', color: '#181717' },
+    { icon: MdOutlineDescription, label: 'Resume', href: '/resume.pdf', color: '#475569' }
   ];
 
   return (
@@ -35,7 +35,7 @@ const Footer = () => {
                 className="group-hover:scale-110 transition-transform"
               />
               <span className="text-[9px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-900">
-                {link.label}
+                {/* {link.label} */}
               </span>
             </a>
           ))}
