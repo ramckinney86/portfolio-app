@@ -9,14 +9,7 @@ import Intro from './components/Introduction';
 import TableOfContents from './components/TableOfContents';
 import SkillGrid from './components/SkillGrid';
 
-// Import your centralized data
-import { 
-  devSkills, 
-  designSkills, 
-  marketingSkills, 
-  softwareSkills, 
-  otherSkills 
-} from './data/skills';
+
 
 function App() {
   return (
@@ -58,40 +51,8 @@ function App() {
             <div className="mt-8 flex justify-center">
               <div className="w-20 h-1 bg-blue-600 mb-10"></div>
             </div>
-            <div className="space-y-24">
-              <div>
-                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
-                  Development
-                </h3>
-                <SkillGrid items={devSkills} />
-              </div>
-
-              <div>
-                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
-                  Design & UI/UX
-                </h3>
-                <SkillGrid items={designSkills} />
-              </div>
-              <div>
-                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
-                  Digital Strategy & Marketing
-                </h3>
-                <SkillGrid items={marketingSkills} />
-              </div>
-
-              <div>
-                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
-                  Environments & Tools
-                </h3>
-                <SkillGrid items={softwareSkills} />
-              </div>
-              <div>
-                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
-                  Management & Operations
-                </h3>
-                <SkillGrid items={otherSkills} />
-              </div>
-            </div>
+                <SkillGrid />
+            
           </div>
           <div className="mt-16 flex justify-center">
             <div className="h-px w-16 bg-slate-200"></div>

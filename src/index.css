@@ -9,3 +9,8 @@
     scroll-margin-top: 10rem; /* Matches your sticky header height plus breathing room */
   }
 }
+
+section, 
+h2 {
+  scroll-margin-top: 180px;
+}
