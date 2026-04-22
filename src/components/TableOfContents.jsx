@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md';
 import { navItems } from '../data/navigation';
+import { contactLinks } from '../data/contact';
 
 const TableOfContents = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,27 @@ const TableOfContents = () => {
               {item.label}
             </a>
           ))}
+          <div className="flex gap-8">
+        {contactLinks.map((link) => (
+          <a
+            key={link.label}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center group transition-transform duration-300 hover:scale-110"
+            aria-label={link.label}
+          >
+            <link.icon 
+              size={24} 
+              style={{ color: link.color }}
+              className="mb-1"
+            />
+            <span className="text-[8px] font-bold uppercase tracking-widest text-slate-500 and group-hover:text-white transition-colors duration-300">
+              {link.label}
+            </span>
+          </a>
+        ))}
+      </div>
         </nav>
       </div>
 
@@ -43,7 +65,9 @@ const TableOfContents = () => {
             </li>
           ))}
         </ul>
+      
       </nav>
+
     </>
   );
 };
