@@ -2,8 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className="max-w-3xl mx-auto px-6 py-20 text-center">
-      <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>About Me</h2>
+    <section className="max-w-3xl mx-auto px-6 text-center">
       <div className="space-y-8">
         {/* Primary Summary */}
         <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
@@ -19,11 +18,6 @@ const About = () => {
         <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
           Central to my approach is a UI/UX-focused methodology. I believe that digital strategy is most effective when it prioritizes the user, which is why I remain hands-on with site architecture and interface development. Beyond my technical contributions, I am an adept leader capable of managing remote and offshore teams while navigating high-level stakeholder requirements. I remain committed to continuous growth, recently refining my skill set through advanced coursework to ensure I am always bringing the latest industry standards to my local and global projects.
         </p>
-      </div>
-      
-      {/* Decorative Divider */}
-      <div className="mt-16 flex justify-center">
-        <div className="h-px w-16 bg-slate-200"></div>
       </div>
     </section>
   );

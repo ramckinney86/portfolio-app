@@ -1,4 +1,5 @@
 import About from './components/About';
+import Contact from './components/Contact';
 import Education from './components/Education';
 import React from 'react';
 import Header from './components/Header';
@@ -19,92 +20,106 @@ import {
 function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 flex flex-col relative">
-      {/* Navigation Anchor for larger screens */}
       <TableOfContents />
-
-      {/* Global Header */}
       <Header />
-
-      {/* Main Content Area */}
       <main className="flex-grow">
         
-        {/* Intro Section */}
+        {/* Introduction */}
         <section id="intro" className="max-w-3xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center text-white uppercase tracking-widest text-[14px]'>Welcome!</h2>
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Welcome!</h2>
           <Intro />
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
         </section>
 
-        {/* About/Bio Section - Placeholder for your narrative flow */}
+        {/* About/Bio */}
         <section id="about" className="max-w-3xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>About Me</h2>
           <About />
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
         </section>
 
-        {/* Professional Experience Placeholder */}
+        {/* Experience */}
         <section id="experience" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Experience</h2>
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Experience</h2>
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
         </section>
         
+        {/* Projects */}
         <section id="projects" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Projects</h2>
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Projects</h2>
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
         </section>
 
-        {/* Capabilities / Skills Section */}
+        {/* Skills */}
         <section id="skills" className="py-20">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]">
+            <h2 className="text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]">
               Technical Skills
             </h2>
             
             <div className="space-y-24">
               <div>
-                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
                   Development
                 </h3>
                 <SkillGrid items={devSkills} />
               </div>
 
               <div>
-                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
                   Design & UI/UX
                 </h3>
                 <SkillGrid items={designSkills} />
               </div>
-
-
               <div>
-                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
                   Digital Strategy & Marketing
                 </h3>
                 <SkillGrid items={marketingSkills} />
               </div>
 
               <div>
-                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
                   Environments & Tools
                 </h3>
                 <SkillGrid items={softwareSkills} />
               </div>
               <div>
-                <h3 className="text-center text-slate-500 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
+                <h3 className="text-center text-slate-100 text-[12px] font-bold uppercase tracking-[0.3em] mb-8">
                   Management & Operations
                 </h3>
                 <SkillGrid items={otherSkills} />
               </div>
             </div>
           </div>
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
         </section>
 
-        {/* Education & Contact Placeholders */}
+        {/* Education */}
         <section id="education" className="py-20">
-          <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Education</h2>
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Education</h2>
           <Education />
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
         </section>
+        
+        {/* Contact */}
         <section id="contact" className="py-20">
-          <h2 className='text-2xl font-bold text-center mb-12 text-white uppercase tracking-widest text-[14px]'>Contact</h2>
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Contact</h2>
+          <Contact />
         </section>
       </main>
-
-      {/* Global Footer */}
       <Footer />
     </div>
   );
