@@ -1,4 +1,3 @@
-```markdown
 # Rob McKinney | Senior Web Developer Portfolio
 
 A professional, modular portfolio built with **React**, **Tailwind CSS**, and **Vite**. This project showcases 15+ years of experience in web development, featuring a high-performance, dark-mode architecture with a focus on clean code and scalable data management.
@@ -33,7 +32,6 @@ portfolio/
 ## 🛠️ Local Development
 
 **Clone the repository:**
-```
 ```bash
 git clone [https://github.com/ramckinney86/portfolio.git](https://github.com/ramckinney86/portfolio.git)
 ```
