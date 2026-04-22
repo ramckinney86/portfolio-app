@@ -49,29 +49,6 @@ function App() {
           </div>
         </section>
 
-        {/* Experience */}
-        <section id="experience" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Professional Experience</h2>
-          <div className="mt-8 flex justify-center">
-            <div className="w-20 h-1 bg-blue-600 mb-2"></div>
-          </div>
-          <Experience />
-          <div className="mt-16 flex justify-center">
-            <div className="h-px w-16 bg-slate-200"></div>
-          </div>
-        </section>
-        
-        {/* Projects */}
-        <section id="projects" className="max-w-5xl mx-auto px-6 py-12">
-          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Projects</h2>
-          <div className="mt-8 flex justify-center">
-            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
-          </div>
-          <div className="mt-16 flex justify-center">
-            <div className="h-px w-16 bg-slate-200"></div>
-          </div>
-        </section>
-
         {/* Skills */}
         <section id="skills" className="py-20">
           <div className="max-w-6xl mx-auto px-4">
@@ -115,6 +92,29 @@ function App() {
                 <SkillGrid items={otherSkills} />
               </div>
             </div>
+          </div>
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
+        </section>
+
+        {/* Experience */}
+        <section id="experience" className="max-w-5xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Professional Experience</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-2"></div>
+          </div>
+          <Experience />
+          <div className="mt-16 flex justify-center">
+            <div className="h-px w-16 bg-slate-200"></div>
+          </div>
+        </section>
+        
+        {/* Projects */}
+        <section id="projects" className="max-w-5xl mx-auto px-6 py-12">
+          <h2 className='text-2xl font-bold text-center mb-8 text-white uppercase tracking-widest text-[18px]'>Projects</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
           </div>
           <div className="mt-16 flex justify-center">
             <div className="h-px w-16 bg-slate-200"></div>
