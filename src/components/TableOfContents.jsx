@@ -21,54 +21,54 @@ const TableOfContents = () => {
       {/* Mobile Toggle Button - Bottom Right */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 right-8 z-[100] md:hidden text-white/50 hover:text-white transition-colors p-2"
+        className="fixed bottom-10 right-10 z-[100] md:hidden text-white/40 hover:text-white transition-colors"
         aria-label="Toggle Navigation"
       >
-        {isOpen ? <MdClose size={32} /> : <MdMenu size={32} />}
+        {isOpen ? <MdClose size={30} /> : <MdMenu size={30} />}
       </button>
 
       {/* Full-Screen Mobile Overlay */}
       <div className={`
-        fixed inset-0 z-[90] bg-slate-950/98 backdrop-blur-2xl flex flex-col items-center justify-between py-20
+        fixed inset-0 z-[90] bg-slate-950/98 backdrop-blur-2xl flex flex-col items-center justify-center
         transition-all duration-500 ease-in-out md:hidden
         ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
       `}>
-        {/* Navigation Section */}
-        <nav className="flex flex-col items-center gap-6">
+        <nav className="flex flex-col items-center gap-6 w-full">
           {navItems.map((item) => (
-            <HashLink
-              key={item.label}
-              smooth
-              to={item.href}
-              onClick={() => setIsOpen(false)}
-              className="text-3xl font-bold uppercase tracking-widest text-white/40 hover:text-white transition-all duration-300"
-            >
-              {item.label}
-            </HashLink>
+            <React.Fragment key={item.label}>
+              <HashLink
+                smooth
+                to={item.href}
+                onClick={() => setIsOpen(false)}
+                className="text-2xl font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-all duration-300"
+              >
+                {item.label}
+              </HashLink>
+
+              {/* Nested Contact Links - only shown under the "Contact" item */}
+              {item.label === 'Contact' && (
+                <div className="flex gap-6 mt-4 pt-6 border-t border-white/5">
+                  {contactLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-transform hover:scale-110"
+                      aria-label={link.label}
+                    >
+                      <link.icon 
+                        size={20} 
+                        style={{ color: link.color }}
+                        className="opacity-60 hover:opacity-100 transition-opacity"
+                      />
+                    </a>
+                  ))}
+                </div>
+              )}
+            </React.Fragment>
           ))}
         </nav>
-
-        {/* Mobile Contact Links Section */}
-        <div className="flex flex-wrap justify-center gap-8 px-10">
-          {contactLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center gap-2 group"
-            >
-              <link.icon 
-                size={22} 
-                style={{ color: link.color }}
-                className="opacity-80 group-hover:opacity-100 transition-opacity"
-              />
-              <span className="text-[7px] font-bold uppercase tracking-[0.3em] text-slate-500">
-                {link.label}
-              </span>
-            </a>
-          ))}
-        </div>
       </div>
 
       {/* Desktop Sidebar - Centered Vertically */}
