@@ -8,80 +8,90 @@ import SkillGrid from '../components/SkillGrid';
 import ProjectGrid from '../components/ProjectGrid';
 
 const Home = () => {
-  // A helper for the section dividers to keep code clean and identical
-  const SectionDivider = ({ accent = false }) => (
-    <div className="flex justify-center mt-16 mb-24">
-      <div className={`h-px w-16 ${accent ? 'bg-blue-600 w-20 h-1' : 'bg-slate-800'}`}></div>
-    </div>
-  );
-
   return (
-    <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+    <div>
+      
       {/* Introduction */}
-      <section id="intro" className="pt-24 md:pt-32">
-        <h2 className="text-center">Introduction</h2>
-        <div className="mt-8 flex justify-center mb-12">
-          <div className="w-20 h-1 bg-blue-600"></div>
+      <section id="intro">
+        <h2>Welcome!</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
         </div>
         <Intro />
-        <SectionDivider />
+        <div className="mt-16 flex justify-center">
+          <div className="w-20 h-1 bg-slate-200"></div>
+        </div>
       </section>
       
       {/* Skills */}
-      <section id="skills" className="py-12">
-        <h2 className="text-center">Skills</h2>
-        <div className="mt-8 flex justify-center mb-12">
-          <div className="w-20 h-1 bg-blue-600"></div>
+      <section id="skills">
+        <div>
+          <h2>
+            Technical Skills
+          </h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
+              <SkillGrid />
         </div>
-        <SkillGrid />
-        <SectionDivider />
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
       </section>
 
       {/* Experience */}
-      <section id="experience" className="py-12">
-        <h2 className="text-center">Experience</h2>
-        <div className="mt-8 flex justify-center mb-4">
-          <div className="w-20 h-1 bg-blue-600"></div>
+      <section id="experience">
+        <h2>Experience</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-2"></div>
         </div>
         <Experience />
-        <SectionDivider />
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
       </section>
       
       {/* Projects */}
-      <section id="projects" className="py-12">
-        <h2 className="text-center">Projects</h2>
-        <div className="mt-8 flex justify-center mb-12">
-          <div className="w-20 h-1 bg-blue-600"></div>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
         </div>
         <ProjectGrid />
-        <SectionDivider />
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="py-12">
-        <h2 className="text-center">About Me</h2>
-        <div className="mt-8 flex justify-center mb-12">
-          <div className="w-20 h-1 bg-blue-600"></div>
+      {/* About/Bio */}
+      <section id="about">
+        <h2>About Me</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
         </div>
         <About />
-        <SectionDivider />
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
       </section>
 
       {/* Education */}
-      <section id="education" className="py-12">
-        <h2 className="text-center">Education</h2>
-        <div className="mt-8 flex justify-center mb-12">
-          <div className="w-20 h-1 bg-blue-600"></div>
+      <section id="education">
+        <h2>Education</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
         </div>
         <Education />
-        <SectionDivider />
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
       </section>
       
       {/* Contact */}
-      <section id="contact" className="py-12 pb-32">
-        <h2 className="text-center">Contact</h2>
-        <div className="mt-8 flex justify-center mb-12">
-          <div className="w-20 h-1 bg-blue-600"></div>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
         </div>
         <Contact />
       </section>
