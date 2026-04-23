@@ -21,7 +21,7 @@ const TableOfContents = () => {
       {/* Mobile Toggle Button - Bottom Right */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-10 right-10 z-[100] md:hidden text-white/40 hover:text-white transition-colors"
+        className="fixed bottom-10 right-10 z-100 md:hidden text-white/40 hover:text-white transition-colors"
         aria-label="Toggle Navigation"
       >
         {isOpen ? <MdClose size={30} /> : <MdMenu size={30} />}
@@ -29,7 +29,7 @@ const TableOfContents = () => {
 
       {/* Full-Screen Mobile Overlay */}
       <div className={`
-        fixed inset-0 z-[90] bg-slate-950/98 backdrop-blur-2xl flex flex-col items-center justify-center
+        fixed inset-0 z-90 bg-slate-950/98 backdrop-blur-2xl flex flex-col items-center justify-center
         transition-all duration-500 ease-in-out md:hidden
         ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
       `}>
