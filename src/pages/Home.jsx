@@ -1,0 +1,99 @@
+import React from 'react';
+import About from '../components/About';
+import Contact from '../components/Contact';
+import Education from '../components/Education';
+import Experience from '../components/Experience';
+import Intro from '../components/Introduction';
+import SkillGrid from '../components/SkillGrid';
+import ProjectGrid from '../components/ProjectGrid';
+
+const Home = () => {
+  return (
+    <div className="max-w-7xl mx-auto px-6">
+      {/* Introduction */}
+      <section id="intro" className="pt-20">
+        <h2>Welcome!</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+        </div>
+        <Intro />
+        <div className="mt-16 flex justify-center">
+          <div className="w-20 h-1 bg-slate-200"></div>
+        </div>
+      </section>
+      
+      {/* Skills */}
+      <section id="skills">
+        <div>
+          <h2>Skills</h2>
+          <div className="mt-8 flex justify-center">
+            <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+          </div>
+          <SkillGrid />
+        </div>
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section id="experience">
+        <h2>Experience</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-2"></div>
+        </div>
+        <Experience />
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
+      </section>
+      
+      {/* Projects */}
+      <section id="projects">
+        <h2>Projects</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+        </div>
+        <ProjectGrid />
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
+      </section>
+
+      {/* About/Bio */}
+      <section id="about">
+        <h2>About Me</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+        </div>
+        <About />
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section id="education">
+        <h2>Education</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+        </div>
+        <Education />
+        <div className="mt-16 flex justify-center">
+          <div className="h-px w-16 bg-slate-200"></div>
+        </div>
+      </section>
+      
+      {/* Contact */}
+      <section id="contact">
+        <h2>Contact</h2>
+        <div className="mt-8 flex justify-center">
+          <div className="w-20 h-1 bg-blue-600 mb-10"></div>
+        </div>
+        <Contact />
+      </section>
+    </div>
+  );
+};
+
+export default Home;

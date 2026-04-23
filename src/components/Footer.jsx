@@ -1,17 +1,30 @@
 import React from 'react';
-import { MdOutlineEmail, MdOutlineDescription } from 'react-icons/md';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { footerLinks } from '../data/contact';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="w-full py-8 px-4 mt-20 border-t border-slate-200 bg-slate-50">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         
-        <div className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">
-          © {currentYear} Rob McKinney • Philadelphia, PA
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-2">
+          {/* Copyright and Location */}
+          <div className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">
+            © {currentYear} Rob McKinney • Philadelphia, PA
+          </div>
+
+          {/* Internal Navigation Link */}
+          <span className="hidden md:inline text-slate-300">|</span>
+          <HashLink 
+            smooth 
+            to="/#top" 
+            className="text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:text-blue-500 transition-colors"
+          >
+            Back to Top
+          </HashLink>
         </div>
 
         <div className="flex items-center gap-6">
