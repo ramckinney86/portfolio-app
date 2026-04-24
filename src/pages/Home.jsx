@@ -27,7 +27,7 @@ const Home = () => {
       <section id="skills">
         <div>
           <h2>
-            Technical Skills
+            Skills
           </h2>
           <div className="mt-8 flex justify-center">
             <div className="w-20 h-1 bg-blue-600 mb-10"></div>

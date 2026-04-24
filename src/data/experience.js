@@ -26,7 +26,7 @@ export const jobs = [
 },
 {
     company: "Viacom",
-    role: "Senior Developer (Catalyst)",
+    role: "Senior Developer",
     location: "New York, NY",
     period: "May 2016 - January 2020",
     description: "Served as the lead technical resource within Catalyst, an internal creative agency. Scoped and executed high-impact projects for global channel brands.",

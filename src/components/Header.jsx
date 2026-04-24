@@ -4,7 +4,7 @@ import { contactLinks } from '../data/contact';
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full py-8 px-4 flex flex-col items-center justify-center bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <header className="sticky top-0 z-50 w-full py-4 md:py-8 px-4 flex flex-col items-center justify-center bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
       <Link to="/" className="group flex flex-col items-center">
         <h1 className="text-3xl font-black text-white uppercase tracking-tighter mb-3 group-hover:text-blue-500 transition-colors">
           Rob McKinney
@@ -12,7 +12,7 @@ const Header = () => {
         <p className="text-slate-400 font-medium tracking-widest uppercase text-[9px] mb-1">
           Web Developer | Digital Marketer | UX Strategist
         </p>
-        <p className="text-slate-400 font-medium tracking-widest text-[9px] mb-6">
+        <p className="text-slate-400 font-medium tracking-widest text-[9px] mb-2 md:mb-6">
           Philadelphia, PA
         </p>
       </Link>
