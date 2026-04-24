@@ -1,67 +1,97 @@
-import React from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import { projects } from '../data/projects';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  const project = projects.find(p => p.id === id);
+  
+  // Find current project and its index
+  const currentIndex = projects.findIndex(p => p.id === id);
+  const project = projects[currentIndex];
+
+  // Logic for the "Next" project - only defined if not at the end
+  const hasNext = currentIndex < projects.length - 1;
+  const nextProject = hasNext ? projects[currentIndex + 1] : null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!project) return <Navigate to="/" />;
 
   return (
-    <div className="bg-slate-950 min-h-screen text-slate-100">
-      <Header />
-      
-      <main className="max-w-7xl mx-auto px-6 pt-32 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div className="max-w-5xl mx-auto px-8 pt-12 md:pt-20 pb-32">
+      {/* Navigation Bar */}
+      <nav className="flex justify-between items-center mb-12 border-b border-white/5 pb-6">
+        <Link 
+          to="/" 
+          className="text-slate-500 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em]"
+        >
+          ← Back
+        </Link>
         
-        {/* Table of Contents / Sidebar (Sticky) */}
-        <aside className="lg:col-span-3">
-          <div className="sticky top-32">
-            <h4 className="text-[10px] font-bold uppercase tracking-widest text-blue-500 mb-6">Overview</h4>
-            <nav className="flex flex-col gap-4 text-xs font-medium uppercase tracking-widest text-slate-500">
-              <a href="#challenge" className="hover:text-white transition-colors">The Challenge</a>
-              <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
-              <a href="#tech" className="hover:text-white transition-colors">Stack Used</a>
-            </nav>
+        {hasNext && (
+          <Link 
+            to={`/projects/${nextProject.id}`} 
+            className="text-slate-500 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em] group"
+          >
+            Next <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+          </Link>
+        )}
+      </nav>
+
+      {/* Main Content Area */}
+      <div className="flex flex-col">
+        <header className="mb-16">
+          <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6 leading-tight text-white">
+            {project.title}
+          </h1>
+          <div className="flex flex-wrap gap-2">
+            {project.tech.map(t => (
+              <span key={t} className="px-3 py-1 bg-slate-900 border border-slate-800 text-[9px] font-bold uppercase tracking-widest text-slate-400 rounded-sm">
+                {t}
+              </span>
+            ))}
           </div>
-        </aside>
+        </header>
 
-        {/* Content Area */}
-        <div className="lg:col-span-9">
-          <header className="mb-12">
-            <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">
-              {project.title}
-            </h1>
-            <div className="flex flex-wrap gap-3">
-              {project.tech.map(t => (
-                <span key={t} className="px-3 py-1 bg-white/5 border border-white/10 text-[9px] font-bold uppercase tracking-widest text-slate-400">
-                  {t}
-                </span>
-              ))}
+        {/* Section: The Work */}
+        <section className="mb-20">
+          <h2 className="text-lg font-black mb-6 uppercase tracking-widest text-blue-600 border-b border-white/5 pb-2">
+            The Work
+          </h2>
+          <p className="text-slate-400 text-lg leading-relaxed max-w-3xl italic font-medium">
+            {project.description}
+          </p>
+        </section>
+
+        {/* Section: Gallery */}
+        <section className="mb-20">
+          <div className="grid grid-cols-1 gap-12">
+            <div className="aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 shadow-2xl">
+              <img 
+                src={project.image} 
+                alt={`${project.title} Preview`} 
+                className="w-full h-full object-cover opacity-90" 
+              />
             </div>
-          </header>
+          </div>
+        </section>
 
-          {/* Description Section */}
-          <section id="challenge" className="mb-20 scroll-mt-32">
-            <h2 className="text-2xl font-bold mb-6 uppercase tracking-tighter">The Work</h2>
-            <p className="text-slate-400 text-lg leading-relaxed max-w-3xl">
-              {project.description}
-            </p>
-          </section>
-
-          {/* Image Gallery */}
-          <section id="gallery" className="grid grid-cols-1 gap-8 scroll-mt-32">
-            <div className="aspect-video bg-slate-900 border border-white/5">
-              {/* Image 1 */}
-              <img src={project.image} alt="Process 1" className="w-full h-full object-cover" />
-            </div>
-          </section>
-        </div>
-      </main>
-
-      <Footer />
+        {/* Section: Tech Stack */}
+        <section>
+          <h2 className="text-lg font-black mb-6 uppercase tracking-widest text-blue-600 border-b border-white/5 pb-2">
+            Technology Stack
+          </h2>
+          <div className="flex flex-wrap gap-x-8 gap-y-4">
+            {project.tech.map(t => (
+              <span key={t} className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">
+                {t}
+              </span>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
