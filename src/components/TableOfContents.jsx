@@ -74,9 +74,6 @@ const TableOfContents = () => {
       {/* Desktop Sidebar - Centered Vertically */}
       <aside className="hidden md:block fixed left-12 top-1/2 -translate-y-1/2 z-40">
         <nav className="flex flex-col gap-6 border-l border-white/10 pl-8">
-          <p className="text-blue-600 font-bold tracking-[0.4em] uppercase text-[8px] mb-2">
-            Section
-          </p>
           {navItems.map((item) => (
             <HashLink
               key={item.label}

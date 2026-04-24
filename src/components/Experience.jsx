@@ -21,7 +21,6 @@ const Experience = () => {
                 </h3>
                 {/* Job Title - Separate line on mobile, dash on desktop */}
                 <div className="flex items-center">
-                  <span className="hidden md:inline text-slate-600 mr-2">—</span>
                   <span className="text-blue-500 md:text-slate-400 font-bold md:font-medium uppercase tracking-widest md:tracking-normal text-[10px] md:text-lg">
                     {job.role}
                   </span>
