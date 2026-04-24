@@ -3,18 +3,18 @@ export const projects = [
   id: "orderful",
   title: "Orderful",
   category: "From Infrastructure Debt to Data-Driven Growth",
-  featuredImage: "./src/projects/orderful-after.png",
+  featuredImage: "../projects/orderful-after.png",
   gallery: [
     {
-      image: "../src/projects/orderful-after.png",
+      image: "../projects/orderful-after.png",
       caption: "The result of a cleaned up and redesigned homepage"
     },
     {
-      image: "../src/projects/orderful-before.png",
+      image: "../projects/orderful-before.png",
       caption: "The homepage error message before I was brought in to cleanup the site"
     },
     {
-      image: "../src/projects/orderful-landingpage.png",
+      image: "../projects/orderful-landingpage.png",
       caption: "A customized landing page that was not possible when I started the project"
     },
   ],
