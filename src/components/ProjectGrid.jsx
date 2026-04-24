@@ -4,33 +4,40 @@ import { projects } from '../data/projects';
 
 const ProjectGrid = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {projects.map((project) => (
         <Link 
+          key={project.id} 
           to={`/projects/${project.id}`} 
-          key={project.id}
-          className="group relative bg-slate-900 overflow-hidden border border-white/5 aspect-square"
+          className="group relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 shadow-2xl"
         >
-          {/* Image Container */}
+          {/* Main Image */}
           <img 
-            src={project.image} 
-            alt={project.title}
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+            src={project.featuredImage} 
+            alt={project.title} 
+            className="w-full h-full object-cover opacity-80 group-hover:opacity-40 transition-all duration-500 group-hover:scale-105" 
           />
-          
-          {/* Tactical Overlay */}
-          <div className="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-            <span className="text-blue-500 font-bold uppercase tracking-widest text-[10px] mb-2">
-              {project.category}
-            </span>
-            <h3 className="text-2xl font-black uppercase tracking-tighter text-white">
+
+          {/* Overlay Text Container */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+            <h3 className="text-xl md:text-2xl font-black uppercase tracking-tighter text-white mb-2 text-center">
               {project.title}
             </h3>
-            <div className="w-12 h-1 bg-blue-500 mt-4 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+            
+            <div className="flex items-center gap-3">
+              <span className="h-1px w-4 bg-blue-600"></span>
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-100">
+                {project.category}
+              </p>
+              <span className="h-1px w-4 bg-blue-600"></span>
+            </div>
           </div>
+
+          {/* Subtle Gradient Overlay for better legibility on hover */}
+          <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </Link>
       ))}
-    </div>
+    </section>
   );
 };
 

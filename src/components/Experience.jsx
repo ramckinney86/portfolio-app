@@ -8,7 +8,7 @@ const Experience = () => {
         {jobs.map((job, index) => (
           <div 
             key={`${job.company}-${index}`} 
-            className="relative md:pl-8 md:border-l md:border-slate-900 md:hover:border-blue-600 transition-colors duration-500"
+            className="relative md:pl-4 md:border-l md:border-slate-900 md:hover:border-blue-600 transition-colors duration-500"
           >
             {/* Indicator Dot - Desktop Only */}
             <div className="hidden md:block absolute -left-1.25 top-0 w-2 h-2 rounded-full bg-slate-800 border border-slate-950"></div>
