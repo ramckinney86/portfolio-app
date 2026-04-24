@@ -27,7 +27,7 @@ export const contactLinks = [
     id: 'resume',
     icon: MdOutlineDescription, 
     label: 'Resume', 
-    href: '/resume.pdf', 
+    href: '../Rob_McKinney-Resume.pdf', 
     color: '#94A3B8' 
   }
 ];
