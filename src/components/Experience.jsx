@@ -6,13 +6,13 @@ const Experience = () => {
     <div className="max-w-4xl mx-auto md:px-6 py-12">
       <div className="space-y-16 md:space-y-20">
         {jobs.map((job, index) => (
-          <div 
-            key={`${job.company}-${index}`} 
+          <div
+            key={`${job.company}-${index}`}
             className="relative md:pl-4 md:border-l md:border-slate-900 md:hover:border-blue-600 transition-colors duration-500"
           >
             {/* Indicator Dot - Desktop Only */}
             <div className="hidden md:block absolute -left-1.25 top-0 w-2 h-2 rounded-full bg-slate-800 border border-slate-950"></div>
-            
+
             <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
               {/* Header: Inline on Desktop, Stacked on Mobile */}
               <h3 className="text-xl font-bold text-white tracking-tight flex flex-col md:flex-row md:items-center">
@@ -22,7 +22,7 @@ const Experience = () => {
                   {job.role}
                 </span>
               </h3>
-              
+
               {/* Date Range */}
               <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mt-2 md:mt-0">
                 {job.period}
@@ -40,8 +40,8 @@ const Experience = () => {
                 <div key={i} className="flex gap-3 text-sm">
                   <span className="text-blue-600 font-bold mt-1">▹</span>
                   <p className="text-slate-300 leading-snug">
-                    <span className="text-slate-100 font-semibold">{item.split(':')[0]}:</span>
-                    {item.split(':')[1]}
+                    <span className="text-slate-100 font-semibold">{item.title}: </span>
+                    {item.detail}
                   </p>
                 </div>
               ))}
