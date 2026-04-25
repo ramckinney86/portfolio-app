@@ -70,14 +70,14 @@ export const projects = [
       image: "/projects/onsolve.png",
       caption: "The unified global domain architecture following the successful brand merger."
     },
-    {
-      image: "/projects/onsolve-ux.png",
-      caption: "Collaborating with design teams to ensure high-fidelity brand transitions."
-    },
-    {
-      image: "/projects/onsolve-personalization.png",
-      caption: "Implementing content scoring to feed customized user paths via Optimizely."
-    },
+    // {
+    //   image: "/projects/onsolve-ux.png",
+    //   caption: "Collaborating with design teams to ensure high-fidelity brand transitions."
+    // },
+    // {
+    //   image: "/projects/onsolve-personalization.png",
+    //   caption: "Implementing content scoring to feed customized user paths via Optimizely."
+    // },
   ],
   description: "Brought on to the marketing team to lead a full redesign, rebrand, and rebuild of multiple enterprise websites. I consolidated fragmented brand identities into a single, high-performance global domain.",
   tech: ["CMS", "Optimizely", "Pantheon", "Git/CI-CD"],
