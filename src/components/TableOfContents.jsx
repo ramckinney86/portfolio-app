@@ -2,19 +2,10 @@ import React, { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { MdMenu, MdClose } from 'react-icons/md';
 import { contactLinks } from '../data/contact';
+import { navItems } from '../data/navigation';
 
 const TableOfContents = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { label: 'Introduction', href: '/#intro' },
-    { label: 'Skills', href: '/#skills' },
-    { label: 'Experience', href: '/#experience' },
-    { label: 'Projects', href: '/#projects' },
-    { label: 'About Me', href: '/#about' },
-    { label: 'Education', href: '/#education' },
-    { label: 'Contact', href: '/#contact' },
-  ];
 
   return (
     <>

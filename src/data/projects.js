@@ -3,18 +3,18 @@ export const projects = [
   id: "orderful",
   title: "Orderful",
   category: "From Infrastructure Debt to Data-Driven Growth",
-  featuredImage: "../projects/orderful-after.png",
+  featuredImage: "/projects/orderful-after.png",
   gallery: [
     {
-      image: "../projects/orderful-after.png",
+      image: "/projects/orderful-after.png",
       caption: "The result of a cleaned up and redesigned homepage"
     },
     {
-      image: "../projects/orderful-before.png",
+      image: "/projects/orderful-before.png",
       caption: "The homepage error message before I was brought in to cleanup the site"
     },
     {
-      image: "../projects/orderful-landingpage.png",
+      image: "/projects/orderful-landingpage.png",
       caption: "A customized landing page that was not possible when I started the project"
     },
   ],
@@ -64,18 +64,18 @@ export const projects = [
   id: "onsolve",
   title: "OnSolve",
   category: "Enterprise Rebrand & Global Domain Consolidation",
-  featuredImage: "../projects/onsolve.png",
+  featuredImage: "/projects/onsolve.png",
   gallery: [
     {
-      image: "../projects/onsolve.png",
+      image: "/projects/onsolve.png",
       caption: "The unified global domain architecture following the successful brand merger."
     },
     {
-      image: "../projects/onsolve-ux.png",
+      image: "/projects/onsolve-ux.png",
       caption: "Collaborating with design teams to ensure high-fidelity brand transitions."
     },
     {
-      image: "../projects/onsolve-personalization.png",
+      image: "/projects/onsolve-personalization.png",
       caption: "Implementing content scoring to feed customized user paths via Optimizely."
     },
   ],
@@ -124,30 +124,30 @@ export const projects = [
   id: "viacom",
   title: "Viacom",
   category: "Internal Agency Leadership & Interactive Executive Media",
-  featuredImage: "../projects/EarningsCal-cover.jpg",
+  featuredImage: "/projects/EarningsCal-cover.jpg",
   gallery: [
     {
-      image: "../projects/Catalyst-Home-After.jpg",
+      image: "/projects/Catalyst-Home-After.jpg",
       caption: "The Catalyst internal agency portal, designed for minimal friction and maximum visual impact."
     },
     {
-      image: "../projects/Catalyst-Home-Before.jpg",
+      image: "/projects/Catalyst-Home-Before.jpg",
       caption: "Interactive earnings call timeline featuring custom filtering and channel-specific color logic."
     },
     {
-      image: "../projects/EarningsCal-cover.jpg",
+      image: "/projects/EarningsCal-cover.jpg",
       caption: "A ground-up rebuild of the Viacommunity platform, modernizing UX and information architecture."
     },
     {
-      image: "../projects/EarningsCal-panel.jpg",
+      image: "/projects/EarningsCal-panel.jpg",
       caption: "A ground-up rebuild of the Viacommunity platform, modernizing UX and information architecture."
     },
     {
-      image: "../projects/Viacommunity-Home-After.jpg",
+      image: "/projects/Viacommunity-Home-After.jpg",
       caption: "A ground-up rebuild of the Viacommunity platform, modernizing UX and information architecture."
     },
     {
-      image: "../projects/Viacommunity-Home-Before.png",
+      image: "/projects/Viacommunity-Home-Before.png",
       caption: "A ground-up rebuild of the Viacommunity platform, modernizing UX and information architecture."
     },
   ],
@@ -200,14 +200,14 @@ export const projects = [
   id: "phantomEye",
   title: "The Phantom Eye",
   category: "Creative Direction & Full-Stack Artist Platform",
-  featuredImage: "../projects/phantomeye-bandcamp.png",
+  featuredImage: "/projects/phantomeye-bandcamp.png",
   gallery: [
     {
-      image: "../projects/phantomeye-home.png",
+      image: "/projects/phantomeye-home.png",
       caption: "A high-impact, custom-designed landing page optimized for artist branding."
     },
     {
-      image: "../projects/phantomeye-contact.png",
+      image: "/projects/phantomeye-contact.png",
       caption: "Custom-styled Bandcamp integration to drive direct-to-fan merchandise sales."
     },
     {
