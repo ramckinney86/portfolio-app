@@ -45,7 +45,7 @@ export const jobs = [
     description: "Collaborated with the consultant team in a client-facing role to modernize SaaS web controls and enhance front-end UI/UX.",
     accomplishments: [
     { title: "SaaS Modernization", detail: "Transitioned legacy web controls to be fully responsive and HTML5 compliant." },
-    { title: "Full-Stack Contribution", detial: "Developed custom ASP.NET (VB) controls integrated into core product functionality."},
+    { title: "Full-Stack Contribution", detail: "Developed custom ASP.NET (VB) controls integrated into core product functionality."},
     ]
 },
 {
